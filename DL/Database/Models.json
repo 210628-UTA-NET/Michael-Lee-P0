@@ -1,0 +1,19 @@
+{
+        "Address":[],
+        "Customer":[],
+        "Order": [],
+        "Products":[],
+        "Stores":[
+            {
+                "Name": "Stephen",
+                "City": "Houston",
+                "State": "Texas"
+            },
+            {
+                "Name": "Matthew",
+                "City": "Reston",
+                "State": "Virginia"
+            }
+        ] 
+
+}

@@ -6,5 +6,9 @@ using Models;
 
 namespace DL
 {
-    
+    public class Repository : IRepository
+    {
+        
+    }
+    }    
 }
