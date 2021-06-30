@@ -1,13 +1,11 @@
-<<<<<<< HEAD
 # Created by https://www.toptal.com/developers/gitignore/api/dotnetcore
 # Edit at https://www.toptal.com/developers/gitignore?templates=dotnetcore
 
 ### DotnetCore ###
 # .NET Core build folders
-UI/bin/
-UI/obj/
-Models/bin/
-Models/obj/
+**/bin
+**/obj
+
 
 # Common node modules locations
 /node_modules
