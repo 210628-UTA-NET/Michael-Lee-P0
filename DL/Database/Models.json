@@ -1,6 +1,6 @@
 {
-        "Address":[],
-        "Customer":[
+        "Addresses":[],
+        "Customers":[
             {
                 "FirstName": "Chadley",
                 "LastName": "Davis",
@@ -23,7 +23,7 @@
                 "Email": "Sarah.Dawn@CSharp.com"
             }
         ],
-        "Order": [],
+        "Orders": [],
         "Products":[],
         "Stores":[
             {

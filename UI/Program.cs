@@ -21,8 +21,6 @@ namespace UI
            Console.WriteLine(customer.Address);
            Console.WriteLine(customer.PhoneNumber);
            Console.WriteLine(customer.Email);
-            
-        
            });
            
         }
