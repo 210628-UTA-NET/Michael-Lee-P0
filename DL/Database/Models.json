@@ -1,6 +1,28 @@
 {
         "Address":[],
-        "Customer":[],
+        "Customer":[
+            {
+                "FirstName": "Chadley",
+                "LastName": "Davis",
+                "Address": "5391 Brick Avenue",
+                "PhoneNumber": "564738322",
+                "Email": "Chadley.Davis@Apple.com"
+            },
+            {
+                "FirstName": "Kat",
+                "LastName": "Stevens",
+                "Address": "6839 Saint Blvd",
+                "PhoneNumber": "778439243",
+                "Email": "Kat.Stevens@Boolean.com"
+            },
+            {
+                "FirstName": "Sarah",
+                "LastName": "Dawn",
+                "Address": "7739 Miles Way",
+                "PhoneNumber": "5839635577",
+                "Email": "Sarah.Dawn@CSharp.com"
+            }
+        ],
         "Order": [],
         "Products":[],
         "Stores":[

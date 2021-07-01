@@ -8,7 +8,25 @@ namespace DL
 {
     public class Repository : IRepository
     {
-        
+        private const string _filePath = "./DL/Database/Models.json";
+        private string _jsonString;
+        private DBModel model {get; set;} //When creating a property, a semicolon is not necessary. 
+        public List<Customer> GetCustomers()
+        {
+            try
+            {
+                _jsonString = File.ReadAllText(_filePath);
+            }
+            catch (System.Exception)
+            {
+                throw new Exception($"File path is invalid" + _filePath); //
+            }
+
+            //This will return a list of restaurant from the jsonString that came from 
+            model = JsonSerializer.Deserialize<DBModel>(_jsonString);
+            return model.Customers;
+        }
     }
-    }    
+    
+        
 }
