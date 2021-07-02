@@ -1,10 +1,9 @@
 using System;
-
-namespace Delegate2
-{
-
-    class Delegate2
+namespace Delegate3
+{ 
+    class Delegate3
     {
+    
         //This is creating a delegate method
         public delegate void Del(string message);
 
@@ -32,21 +31,22 @@ namespace Delegate2
             Console.WriteLine("Input message: ");
             string message = Console.ReadLine();
             callback(message);
-            Console.WriteLine();
         }
-        static void Main(string[] args)
+        public static void Main3(String[] args)
         {
-            // Assign the WriteMessage method to a Del variable named handler
-            Del handler1 = WriteMessage;
-            Del handler2 = WriteMessageCaps;
-            Del handler3 = WriteMessageSpace;  
-            Del handlerall = handler1 + handler2 + handler3;
-            // using the delegate to call WriteMessage
-            readMessage(handlerall);
-            // readMessage(handler2);
-            // readMessage(handler3);
+            Del writer = WriteMessage;
+            //writer("hello world");
+            Del WriteCap = WriteMessageCaps;
+            Del WriteSpace = WriteMessageSpace;
+
+            //writeAll is an invocation list of delegates
+            Del writeAll = writer + WriteCap +WriteSpace;
+            //Outputs the number of delegates in the invocation list
+            writeAll -= writer;
+            Console.WriteLine(writeAll.GetInvocationList().GetLength(0));
+            writeAll("Greetings");
+            //Outputs the number of delegates in the invocation list
+            Console.WriteLine(writeAll.GetInvocationList().GetLength(0));
         }
-        
     }
 }
-
