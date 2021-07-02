@@ -23,5 +23,4 @@ namespace UI //The Namespace of the UI.
         MenuType YourChoice();
     }
 }
-    }
-}
+    

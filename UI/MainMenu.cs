@@ -4,16 +4,16 @@ namespace UI
 {
     public class MainMenu : IMenu
     {
-        public void Menu();
+        public void Menu()
         {
             Console.WriteLine("Hello, and Welcome to the Main Menu!");
             Console.WriteLine("How may I help you?");
-            Console.WriteLine("[2] Add a Customer]");
-            Console.WriteLine("[1] Display the Customers]");
-            Console.WriteLine("[0] Exit]");
+            Console.WriteLine("[2] Add a Customer");
+            Console.WriteLine("[1] Display the Customers");
+            Console.WriteLine("[0] Exit");
         }
 
-        public MenuType YourChoice()
+        public MenuType UserInput()
         {
             //Console.ReadLine() method will record what you type in the terminal. 
             string userInput = Console.ReadLine();
@@ -28,9 +28,10 @@ namespace UI
                 case "0":
                     return MenuType.Exit;
                 default:
-                    Console.WriteLine("This is an invalid input.");" 
+                    Console.WriteLine("This is an invalid input."); 
                     Console.WriteLine("Press Enter to continue.");
                     Console.ReadLine();
+                    //The Input was not correct, returning to the main menu for further instructions. 
                     return MenuType.MainMenu;
             }
         }
