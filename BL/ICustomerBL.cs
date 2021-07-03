@@ -11,5 +11,7 @@ namespace ICustomerBL
     public interface ICustomerBL
     {
         List<Customer> GetCustomers();
+
+        Customer AddCustomer(Customer p_customer);
     }
 }

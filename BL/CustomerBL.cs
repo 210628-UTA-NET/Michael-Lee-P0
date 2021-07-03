@@ -4,7 +4,7 @@ using DL; //Involves using DL
 using Models; //Involves using Models
 namespace BL
 {
-    public class CustomerBL 
+    public class CustomerBL
   
     {
         /// <summary>
