@@ -6,7 +6,7 @@ namespace UI //The Namespace of the UI.
         MainMenu,
         OrderMenu,
         CustomerMenu,
-        AddCustomerView,
+        AddCustomerMenu,
         Exit
 
     }
