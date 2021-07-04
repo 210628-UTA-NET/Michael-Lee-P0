@@ -34,11 +34,7 @@ namespace UI //Namspace is currently UI
                         Console.WriteLine("The Information cannot be processed.  Please try again.");
                         break;
                 }
-
             }
-
-
-
         }
     }
 }

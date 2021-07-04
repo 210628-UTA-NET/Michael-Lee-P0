@@ -17,9 +17,9 @@ namespace UI
             string userInput = Console.ReadLine(); //Creating the ReadLine and user Input
             switch (userInput)
             {
-                case "0";
+                case "0":
                     return MenuType.OrderMenu;
-                case "1";
+                case "1":
                     return MenuType.MainMenu;
                 default:
                     System.Console.WriteLine("This is an Invalid Input, Please press Enter if you want to continue.");

@@ -13,7 +13,7 @@ namespace UI
             Console.WriteLine("[0] Exit");
         }
 
-        public MenuType UserInput()
+        public MenuType YourChoice()
         {
             //Console.ReadLine() method will record what you type in the terminal. 
             string userInput = Console.ReadLine();
