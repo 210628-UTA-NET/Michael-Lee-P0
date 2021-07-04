@@ -30,6 +30,8 @@ namespace UI //Namspace is currently UI
                     
                     case MenuType.CustomerMenu:
                     //Call 
+                        restMenu = new MainMenu();
+                        break;
                         
                     
                     case MenuType.Exit: //This is the ends condition of the switch statement
