@@ -8,7 +8,7 @@ namespace UI
         private static Models.Customer _newCustomer = new Models.Customer();
         public MenuType YourChoice()
         {
-            
+
         }
 
     }

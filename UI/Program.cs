@@ -19,7 +19,7 @@ namespace UI //Namspace is currently UI
                 Console.Clear();
                 //The Call Menu will Display
                 CustomerMenu.Menu();
-                //
+                //Use the CurrentMenu to impy the user's choice
                 currentMenu = CustomerMenu.YourChoice();
 
                 switch (currentMenu)
@@ -28,8 +28,14 @@ namespace UI //Namspace is currently UI
                         CustomerMenu = new MainMenu();
                         break;
                     
+                    case MenuType.CustomerMenu:
+                    //Call 
+                        
+                    
                     case MenuType.Exit: //This is the ends condition of the switch statement
                         Console.WriteLine("Thank you for your time!");
+                        Console.WriteLine("See you next Time!");
+                        repeat = false;
                     default:
                         Console.WriteLine("The Information cannot be processed.  Please try again.");
                         break;

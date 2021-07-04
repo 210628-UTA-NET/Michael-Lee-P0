@@ -8,9 +8,9 @@ namespace UI
         {
             Console.WriteLine("Hello, and Welcome to the Main Menu!");
             Console.WriteLine("How may I help you?");
-            Console.WriteLine("[2] Add a Customer");
+            Console.WriteLine("[0] Add a Customer");
             Console.WriteLine("[1] Display the Customers");
-            Console.WriteLine("[0] Exit");
+            Console.WriteLine("[2] Exit");
         }
 
         public MenuType YourChoice()
@@ -20,12 +20,12 @@ namespace UI
 
             switch (userInput)
             {
-                case "2": 
+                case "0": 
                     Console.WriteLine("Redirecting to Order Menu");
                     return MenuType.OrderMenu;
                 case "1":
                     return MenuType.MainMenu;
-                case "0":
+                case "2":
                     return MenuType.Exit;
                 default:
                     Console.WriteLine("This is an invalid input."); 
