@@ -4,10 +4,12 @@ namespace UI //The Namespace of the UI.
     public enum MenuType 
     {
         MainMenu,
+        MenuFactory,
         OrderMenu,
         CustomerMenu,
         AddCustomerMenu,
-        
+        StoreMenu,
+
         Exit
 
     }
