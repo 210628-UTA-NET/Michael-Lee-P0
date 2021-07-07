@@ -5,6 +5,22 @@ namespace UI
 {
     public class MenuFactory : IFactory
     {
+        //Get Configuration learned on 7/7/21
+        virtual configuration = new ConfigurationBuilder()
+            .SetBasePath(Directory.GetCurrentDirectory());
+            .AddJsonFile("appsetting.json");
+            .Build();
+
+        //Grabs our connectionString
+
+        string connectionString = configuration.GetConnectionString("Reference2DB");
+
+        DBContextOptions<DemoDbContext> options = new DbContextOpetionsBuilder<DemoDbContext>()
+            .UseSQLServer(connectionString)
+            .Options;
+
+
+
         public IMenu GetMenu(MenuType p_menu)
         {
             switch (p_menu)

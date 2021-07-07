@@ -8,7 +8,7 @@ namespace UI
         {
             Console.WriteLine("Hello, and Welcome to the Main Menu!");
             Console.WriteLine("How may I help you?");
-            Console.WriteLine("[0] Add a Customer");
+            Console.WriteLine("[0] Add a Customer Profile");
             Console.WriteLine("[1] Display the Customers");
             Console.WriteLine("[2] Exit");
         }
