@@ -9,6 +9,7 @@ namespace UI //Namspace is currently UI
     { 
         static void Main(string[] args) //Main 
         {
+            IFactory menuFactory = new MenuFactory();
             IMenu CustomerMenu = new MainMenu();
             bool repeat = true;
             MenuType currentMenu = MenuType.MainMenu; //CurrentMenu will equal the MenuTyep.MainMenu. 

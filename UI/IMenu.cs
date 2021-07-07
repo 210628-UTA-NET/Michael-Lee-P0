@@ -7,6 +7,7 @@ namespace UI //The Namespace of the UI.
         OrderMenu,
         CustomerMenu,
         AddCustomerMenu,
+        
         Exit
 
     }
