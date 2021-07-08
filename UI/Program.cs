@@ -34,14 +34,16 @@ namespace UI //Namspace is currently UI
                         break;
                     case MenuType.ShowCustomerMenu:
                         restMenu = menuFactory.GetMenu(MenuType.ShowCustomerMenu);
-                    case MenuType.CustomerMenu:
-                    case MenuType.CustomerMenu:
-                    
+                        break;
+                    case MenuType.OrderMenu:
+                        restMenu = menuFactory.GetMenu(MenuType.OrderMenu);
+                        break;
                     
                     case MenuType.Exit: //This is the ends condition of the switch statement
                         Console.WriteLine("Thank you for your time!");
                         Console.WriteLine("See you next Time!");
                         repeat = false;
+                        break;
                     default:
                         Console.WriteLine("The Information cannot be processed.  Please try again.");
                         break;
