@@ -2,7 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text.Json;
-using Models;
+using Model = Models;
+using Entity = DL.Entities;
 using System.Linq;
 
 namespace DL
@@ -12,7 +13,7 @@ namespace DL
         private const string _filePath = "./../DL/Database/Models.json";
         private string _jsonString;
         private DBModel model {get; set;} //When creating a property, a semicolon is not necessary. 
-        public List<Customer> GetCustomers()
+        public List<Model.Customer> GetCustomers()
         {
             try
             {

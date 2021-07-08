@@ -11,6 +11,10 @@ namespace DL //The namespace for DL
     ///</summary>
     public interface IRepository
     {
+    /// <summary>
+    /// Gets a list of Restaurants stored in our database. 
+    /// </summary>
+    /// <returns></returns>
         List<Customer> GetCustomers();
 
     }

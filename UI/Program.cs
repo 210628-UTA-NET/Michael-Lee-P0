@@ -38,6 +38,9 @@ namespace UI //Namspace is currently UI
                     case MenuType.OrderMenu:
                         restMenu = menuFactory.GetMenu(MenuType.OrderMenu);
                         break;
+                    case MenuType.StoreFrontMenu:
+                        restMenu = menuFactory.GetMenu(MenuType.StoreFrontMenu);
+                        break;
                     
                     case MenuType.Exit: //This is the ends condition of the switch statement
                         Console.WriteLine("Thank you for your time!");

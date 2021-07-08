@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using Models;
 
-namespace ICustomerBL
+namespace BL
 {
     ///<summary>
     ///Handles all the business logic for store model
