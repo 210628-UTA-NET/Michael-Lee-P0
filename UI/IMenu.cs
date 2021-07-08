@@ -1,4 +1,4 @@
-using System; //Always put the using System. 
+
 namespace UI //The Namespace of the UI. 
 {
     public enum MenuType 

@@ -10,7 +10,7 @@ namespace UI //Namspace is currently UI
         static void Main(string[] args) //Main 
         {
             IFactory menuFactory = new MenuFactory();
-            IMenu CustomerMenu = new MainMenu();
+            IMenu restMenu = new MainMenu();
             bool repeat = true;
             MenuType currentMenu = MenuType.MainMenu; //CurrentMenu will equal the MenuTyep.MainMenu. 
             
@@ -19,16 +19,15 @@ namespace UI //Namspace is currently UI
             {
                 Console.Clear();
                 //The Call Menu will Display
-                CustomerMenu.Menu();
+                restMenu.Menu();
                 //Use the CurrentMenu to impy the user's choice
-                currentMenu = CustomerMenu.YourChoice();
+                currentMenu = restMenu.YourChoice();
 
                 switch (currentMenu)
                 {
                     case MenuType.MainMenu:
-                        CustomerMenu = new MainMenu();
+                        restMenu = new MainMenu();
                         break;
-                    
                     case MenuType.CustomerMenu:
                     //Call 
                         restMenu = new MainMenu();

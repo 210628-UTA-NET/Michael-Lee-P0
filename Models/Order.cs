@@ -9,7 +9,7 @@ namespace Models //name of the model
         public int Id {get;}
         public List<LineItem> LineItems{get; set;}
         public Address Location {get; set;}
-        public DateTime OrderDate {get; set;}
+        public DateTime Price {get; set;}
         public Order(int id, Address orderlocation)
         {
             

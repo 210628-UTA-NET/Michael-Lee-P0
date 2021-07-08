@@ -1,8 +1,10 @@
+using System.IO;
 using BL;
 using DL;
-
+using DL.Entities;
 namespace UI
 {
+    //The class abstract for main and exports for the Factory.cs
     public class MenuFactory : IFactory
     {
         //Get Configuration learned on 7/7/21
@@ -25,13 +27,13 @@ namespace UI
         {
             switch (p_menu)
             {
-                case MenuType.MainMenu:
+                case MenuType.MainMenu:// Bring the user to the Main Menu to instantiate the object. 
                     return new MainMenu();
-                case MenuType.CustomerMenu();
+                case MenuType.CustomerMenu:
                     return new CustomerMenu();
                 case MenuType.ShowCustomerMenu:
                 //ShowRestaurantMenu needs a RestaurantBL object in the parameter because it depends on that object to be able to run its functionality
-                //RestaurantBL needs the Repository object in the parameter because it depends on that object to be able to run
+                //BL needs the Repository object in the parameter because it depends on that object to be able to run
                 //This is call Dependency Injection
                 return new ShowCustomerMenu(new BL(new Repository()));
                 case MenuType.AddCustomerMenu:
