@@ -9,10 +9,10 @@ namespace UI //Namspace is currently UI
     { 
         static void Main(string[] args) //Main 
         {
-            IFactory menuFactory = new MenuFactory();
             IMenu restMenu = new MainMenu();
             bool repeat = true;
             MenuType currentMenu = MenuType.MainMenu; //CurrentMenu will equal the MenuTyep.MainMenu. 
+            IFactory menuFactory = new MenuFactory();
             
             
             while (repeat)
@@ -26,13 +26,17 @@ namespace UI //Namspace is currently UI
                 switch (currentMenu)
                 {
                     case MenuType.MainMenu:
-                        restMenu = new MainMenu();
+                        restMenu = menuFactory.GetMenu(MenuType.MainMenu);
                         break;
                     case MenuType.CustomerMenu:
-                    //Call 
-                        restMenu = new MainMenu();
+                    //Call the Factory GetMenu(), Returning CustomerMenu()
+                        restMenu = menuFactory.GetMenu(MenuType.CustomerMenu);
                         break;
-                        
+                    case MenuType.ShowCustomerMenu:
+                        restMenu = menuFactory.GetMenu(MenuType.ShowCustomerMenu);
+                    case MenuType.CustomerMenu:
+                    case MenuType.CustomerMenu:
+                    
                     
                     case MenuType.Exit: //This is the ends condition of the switch statement
                         Console.WriteLine("Thank you for your time!");

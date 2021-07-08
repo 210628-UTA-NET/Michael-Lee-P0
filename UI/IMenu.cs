@@ -9,6 +9,7 @@ namespace UI //The Namespace of the UI.
         CustomerMenu,
         AddCustomerMenu,
         StoreMenu,
+        ShowCustomerMenu,
 
         Exit
 
