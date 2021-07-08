@@ -9,10 +9,10 @@ namespace UI //Namspace is currently UI
     { 
         static void Main(string[] args) //Main 
         {
-            IMenu restMenu = new MainMenu();
-            bool repeat = true;
+            IMenu restMenu = new MainMenu(); //
+            bool repeat = true; //set a condition for the while statement.
             MenuType currentMenu = MenuType.MainMenu; //CurrentMenu will equal the MenuTyep.MainMenu. 
-            IFactory menuFactory = new MenuFactory();
+            IFactory menuFactory = new MenuFactory(); //Have a class instance of the MenuFactory and a reference towards the interface type. 
             
             
             while (repeat)
