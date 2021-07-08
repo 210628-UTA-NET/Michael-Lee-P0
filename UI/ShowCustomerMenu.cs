@@ -1,4 +1,6 @@
 using System;
+using BL;
+using Models;
 using System.Collections.Generic;
 
 namespace UI
@@ -15,7 +17,7 @@ namespace UI
             Console.WriteLine("List of Customers:");
             Console.WriteLine("-------------------");
             //instantiates a list of Customer of type ICustomerBL and calls the "GetAllCustomers" Method within the BL that retrieves information from the repository
-            List <Customer> customers = _customerBL.GetAllCustomers();
+            List <Customer> customers = _customerBL.GetCustomers();
 
             //loop through list of customers and print the Customer Object (capable via the toString override method)
             foreach (Customer cust in customers)
