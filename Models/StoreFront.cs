@@ -2,8 +2,8 @@ using System;
 
 namespace Models
 {
-    public class Store
+    public class StoreFront
     {
-        
+            
     }
 }
