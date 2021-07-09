@@ -8,7 +8,7 @@ namespace UI
         public void Menu()
         {
             Console.WriteLine("Hello, Welcome the Order Menu!");
-            Console.WriteLine("How can I assist you?");
+            Console.WriteLine("How can I assist you? (Press the number keys corresponded)");
             Console.WriteLine("[0] Add an order item of your preference.");
             Console.WriteLine("[1] Completed the order."); //This results to the order being completed. 
         }

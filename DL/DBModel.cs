@@ -6,7 +6,7 @@ namespace DL
 	public class DBModel
     {
         public List<Customer> Customers { get; set; }
-        public List<Store> Stores { get; set; }
+        public List<StoreFront> Stores { get; set; }
     }
 }
 
