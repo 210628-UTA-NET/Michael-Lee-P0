@@ -25,7 +25,7 @@ namespace UI //Namspace is currently UI
 
                 switch (currentMenu)
                 {
-                    case MenuType.MainMenu:
+                    case MenuType.MainMenu: //Add a MenuType.MainMenu()
                         restMenu = menuFactory.GetMenu(MenuType.MainMenu);
                         break;
                     case MenuType.CustomerMenu:
