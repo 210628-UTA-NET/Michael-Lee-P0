@@ -6,7 +6,7 @@ namespace UI
 {
     public class AddCustomerMenu : IMenu
     {
-        private static Models.Customer _newCustomer = new Customers();
+        private static Models.Customer _newCustomer = new Models.Customer();
         public MenuType YourChoice()
         {
             string input = Console.ReadLine();
