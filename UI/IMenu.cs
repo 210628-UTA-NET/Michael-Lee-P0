@@ -11,6 +11,7 @@ namespace UI //The Namespace of the UI.
         StoreMenu,
         StoreFrontMenu,
         ShowCustomerMenu,
+        StoreInventoryMenu,
 
         Exit
 
