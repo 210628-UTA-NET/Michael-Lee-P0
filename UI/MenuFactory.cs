@@ -12,7 +12,7 @@ namespace UI
     //The class abstract for main and exports for the Factory.cs
     public class MenuFactory : IFactory
     {
-        IMenu GetMenu(MenuType p_menu)
+        public IMenu GetMenu(MenuType p_menu)
         {
             /* //Get Configuration learned on 7/7/21
             var configuration = new ConfigurationBuilder()
@@ -34,9 +34,13 @@ namespace UI
                     return new MainMenu();
                 case MenuType.CustomerMenu:
                     return new CustomerMenu();
+                case MenuType.OrderMenu:
+                    return new OrderMenu();
                 case MenuType.ShowCustomerMenu:
                     return null;
-                //ShowRestaurantMenu needs a RestaurantBL object in the parameter because it depends on that object to be able to run its functionality
+                case MenuType.StoreFrontMenu:
+                    return new StoreFrontMenu();
+                //ShowRestaurantMenu needs a BL object in the parameter because it depends on that object to be able to run its functionality
                 //BL needs the Repository object in the parameter because it depends on that object to be able to run
                 //This is call Dependency Injection
 
