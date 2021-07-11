@@ -5,13 +5,12 @@ using System.Collections.Generic;
 
 namespace DL.Entities
 {
-    public partial class Customer
+    public partial class StoreFront
     {
-        public int CustomerId { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
+        public int StoreId { get; set; }
+        public string StoreName { get; set; }
         public string Address { get; set; }
-        public string Email { get; set; }
+        public string Inventory { get; set; }
         public string ListofOrderId { get; set; }
 
         public virtual Order Order { get; set; }
