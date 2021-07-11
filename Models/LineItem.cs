@@ -6,9 +6,9 @@ namespace Models
 {
     public class LineItem
     {
-    private int _quantity;
+    public int _quantity;
 
-    private int LineItem_Id; 
+    public int LineItem_Id; 
         public string Product {get; set;}
         public int Quantity
         {
