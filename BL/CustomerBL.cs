@@ -12,12 +12,10 @@ namespace BL
         /// We do it this way (with interfaces) because we can easily switch out the implementation of RRDL when we want to change data source 
         /// (change from file system into database stored in the cloud)
         /// </summary>
-        private IRepository _repo;
-        public CustomerBL() //This is default constructor. No parameters
-        {
-            _repo = new Repository(); //The new word has to be tied to the constructor. 
-        }
-        public CustomerBL(IRepository p_repo)
+        private ICustomerRepository _repo;
+        private ICustomerRepository p_repo;
+
+        public CustomerBL(ICustomerRepository _repo) //This is default constructor. No parameters
         {
             _repo = p_repo;
         }
