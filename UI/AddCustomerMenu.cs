@@ -65,7 +65,6 @@ namespace UI
                 case "0": 
                     Console.WriteLine("Redirecting to Order Menu");
                     return MenuType.CustomerMenu;
-                
                 default:
                     Console.WriteLine("Unfortunately, the Input is not correct.");
                     Console.WriteLine("If you want to continue, press Enter.");
