@@ -10,7 +10,7 @@ namespace Models
         private string address; //Private string for address
         private string email; //Private string for email
 
-        public Customer(){} //No Args Constructor to build an object without parameters. 
+        public Customer(){}
         public int Customer_Id { get; set;}
         public string FirstName
         { 
@@ -47,14 +47,16 @@ namespace Models
         public string Email { get; set;}
         public List<Orders> ListofOrders {get; set;}
 
-        public Customer(string firstName, string lastName, string Address, string ListOfOrder)
+        public Customer(int p_Customer_Id, string p_firstName, string p_lastName, string p_Address, string p_Email, List<Orders> p_ListOfOrder)
 
         //You can override the default string functions, allowing to output the object parameters or receive and namespace.class COnstructor" 
         {
-            FirstName = firstName;
-            LastName = lastName;
-            Address = address;
-            Email = email;
+            Customer_Id = p_Customer_Id;
+            FirstName = p_firstName;
+            LastName = p_lastName;
+            Address = p_Address;
+            Email = p_Email;
+            ListofOrders = p_ListOfOrder;
         } 
          public override string ToString() 
         {
@@ -63,3 +65,6 @@ namespace Models
         }
     }
 }
+
+
+
