@@ -6,7 +6,8 @@ namespace Models
     public class Product
     {
         private string _name;
-        private double _price;
+        private decimal _price;
+        private string Description { get; set; }
         public string Name 
         {
             get
@@ -17,12 +18,12 @@ namespace Models
             {
                 if (!Regex.IsMatch(value, @"^[A-Za-z .]+$")) //Does the string match letters A to Z. 
                 {
-                    throw new Exception("Letters must be A to Z.");
+                    throw new Exception("Sorry, you cannot include numbers.");
                 }
                 _name = value;
             }
         }
-        public double Price 
+        public decimal Price 
         {
             get
             {
@@ -32,7 +33,7 @@ namespace Models
             {
                 if (value < 0)
                 {
-                    throw new Exception("The Price cannot be zero.");
+                    throw new Exception("The Price cannot be less than zero.");
                 }
                 _price = value;
             }
