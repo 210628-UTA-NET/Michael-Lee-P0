@@ -15,5 +15,6 @@ namespace DL.Entities
         public string ListofOrderId { get; set; }
 
         public virtual Order Order { get; set; }
+        public object Customer_Id { get; internal set; }
     }
 }
