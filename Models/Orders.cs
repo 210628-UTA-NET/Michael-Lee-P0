@@ -35,6 +35,9 @@ namespace Models //name of the model
                 _totalPrice = value;
             }    
         } //Eventually, I will build an object (and a constructor). Do not need a semicolon. 
+
+        public string OrderLinetItems { get; set; }
+
         public Orders(int id, string orderlocation, decimal price)
         {
             Order_Id = id;

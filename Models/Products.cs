@@ -39,6 +39,9 @@ namespace Models
                 _price = value;
             }
         }
+
+        public string Product_Description { get; set; }
+
         public Products(){} //No arguements Constructor, no semicolon. 
         public Products(int p_Product_Id, string p_name, decimal p_Price, string p_Description) //purpose of parameters is to insert into the field. 
         //You can override the default string functions, allowing to output the object parameters or receive and namespace.class COnstructor" 
