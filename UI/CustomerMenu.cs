@@ -20,8 +20,8 @@ namespace UI
 
         MenuType IMenu.YourChoice()
         {
-            string userInput = Console.ReadLine();
-            switch (userInput)
+            string YourChoice = Console.ReadLine();
+            switch (YourChoice)
             {
                 case "1":
                     return MenuType.AddCustomerMenu;
