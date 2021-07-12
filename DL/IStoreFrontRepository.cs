@@ -15,8 +15,7 @@ namespace DL //The namespace for DL
     /// Gets a list of Restaurants stored in our database. 
     /// </summary>
     /// <returns></returns>
-    
-    //List<Customer> GetCustomers();//This is for Json File (Will not need it). 
+    List<StoreFront> GetStoreFronts();//This is for Json File (Will not need it). 
 
     }
         

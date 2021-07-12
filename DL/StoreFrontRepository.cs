@@ -54,5 +54,10 @@ namespace DL
         {
             throw new NotImplementedException();
         }
+
+        public List<StoreFront> GetStoreFronts()
+        {
+            throw new NotImplementedException();
+        }
     }        
 }
