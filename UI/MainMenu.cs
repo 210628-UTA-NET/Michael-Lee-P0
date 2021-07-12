@@ -12,7 +12,6 @@ namespace UI
             Console.WriteLine("[1] Go to the Order Menu.");
             Console.WriteLine("[2] Go to the StorMenu.");
             Console.WriteLine("[3] Display the Customers");
-            Console.WriteLine("[4] Display the Customers");
 
             Console.WriteLine("[9] Exit");
         }
