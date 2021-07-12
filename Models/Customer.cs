@@ -12,6 +12,7 @@ namespace Models
 
         public Customer(){}
         public int Customer_Id { get; set;}
+        public int Id { get; set; }
         public string FirstName
         { 
             get
