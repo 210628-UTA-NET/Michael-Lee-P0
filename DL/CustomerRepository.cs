@@ -19,7 +19,7 @@ namespace DL
         public bool AddCustomer(Entity.Customer p_customer)
         {
             _context.Customers.Add(new Entity.Customer{
-                Id = p_customer.Id,
+                Customer_Id = p_customer.Customer_Id,
                 FirstName = p_customer.FirstName,
                 LastName = p_customer.LastName,
                 Address = p_customer.Address,
@@ -34,7 +34,7 @@ namespace DL
                 customer =>
                     new Models.Customer()
                     {
-                        Customer_Id = customer.Id,
+                        Customer_Id = customer.CustomerId,
                         FirstName = customer.FirstName,
                         LastName = customer.LastName,
                         Address = customer.Address,
@@ -50,7 +50,7 @@ namespace DL
             return              
                 new Models.Customer()
                 {
-                    Customer_Id = output.Id,
+                    Customer_Id = output.CustomerId,
                     FirstName = output.FirstName,
                     LastName = output.LastName,
                     Address = output.Address,
