@@ -11,7 +11,7 @@ namespace UI //Namspace is currently UI
         {
             IMenu restMenu = new MainMenu(); //
             bool repeat = true; //set a condition for the while statement.
-            MenuType currentMenu = MenuType.MainMenu; //CurrentMenu will equal the MenuTyep.MainMenu. 
+            MenuType currentMenu = MenuType.MainMenu; //CurrentMenu will equal the CurrentMenu.MainMenu. 
             IFactory menuFactory = new MenuFactory(); //Have a class instance of the MenuFactory and a reference towards the interface type. 
             
             
@@ -28,18 +28,33 @@ namespace UI //Namspace is currently UI
                     case MenuType.MainMenu: //Add a MenuType.MainMenu()
                         restMenu = menuFactory.GetMenu(MenuType.MainMenu);
                         break;
-                    case MenuType.CustomerMenu:
+                    case MenuType.CustomerMenu: //Added a CustomerMenu()
                     //Call the Factory GetMenu(), Returning CustomerMenu()
                         restMenu = menuFactory.GetMenu(MenuType.CustomerMenu);
                         break;
-                    case MenuType.ShowCustomerMenu:
+                    case MenuType.ShowCustomerMenu: //Added a ShowCustomerMenu()
                         restMenu = menuFactory.GetMenu(MenuType.ShowCustomerMenu);
                         break;
-                    case MenuType.OrderMenu:
+                    case MenuType.OrderMenu: //Added an OrderMenu()
                         restMenu = menuFactory.GetMenu(MenuType.OrderMenu);
                         break;
-                    case MenuType.StoreFrontMenu:
+                    case MenuType.AddCustomerMenu: //Added a AddCustomerMenu()
+                        restMenu = menuFactory.GetMenu(MenuType.AddCustomerMenu);
+                        break;
+                    case MenuType.SearchCustomer: //Added a SearchCustomer()
+                        restMenu = menuFactory.GetMenu(MenuType.SearchCustomer);
+                        break;
+                    case MenuType.StoreFrontMenu: //This is essentially a ViewStoreFrontInventoryMenu()
                         restMenu = menuFactory.GetMenu(MenuType.StoreFrontMenu);
+                        break;
+                    case MenuType.PlaceOrder: //Added a PlaceOrder()
+                        restMenu = menuFactory.GetMenu(MenuType.PlaceOrder);
+                        break;
+                    case MenuType.ViewOrderHistory: //Added a ViewOrderHistory()
+                        restMenu = menuFactory.GetMenu(MenuType.ViewOrderHistory);
+                        break;
+                    case MenuType.ReplenishInventory: //Added a ReplenishInventory()
+                        restMenu = menuFactory.GetMenu(MenuType.ReplenishInventory);
                         break;
                     
                     case MenuType.Exit: //This is the ends condition of the switch statement
@@ -52,6 +67,8 @@ namespace UI //Namspace is currently UI
                         break;
                 }
             }
+            Console.Clear();//Created a Console.Clear method to clear the screen and console buffer. 
+            Console.WriteLine("The Application is Closed.  Thank you for your time!");
         }
     }
 }

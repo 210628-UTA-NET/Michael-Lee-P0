@@ -4,27 +4,31 @@ namespace UI //The Namespace of the UI.
     public enum MenuType 
     {
         MainMenu,
+        CustomerMenu,
         MenuFactory,
         OrderMenu,
-        CustomerMenu,
         AddCustomerMenu,
+        SearchCustomer,
         StoreMenu,
         StoreFrontMenu,
         ShowCustomerMenu,
         StoreInventoryMenu,
+        PlaceOrder,
         ViewOrderHistory,
-
+        ReplenishInventory,
         Exit
 
     }
-    public interface IMenu
+    public interface IMenu //It is important to create an interface for the IMenu. 
     {
         /// <summary>
+        /// The CurrentMenu will describe the current Menu.  
         /// Will display the overall menu of the class and the choices you can make in that menu class 
         /// </summary>
         public void Menu();
         /// <summary>
-        /// This method will record the user's choice and change your many based on their input
+        /// If I want to ChooseMenu, then the user will traverse menus that are based on the input. 
+        /// This method will record the user's choice and change your many based on their input.
         /// </summary>
         /// <returns>Returnes a value that will dictate what menu to change to</returns>
         public MenuType YourChoice();
