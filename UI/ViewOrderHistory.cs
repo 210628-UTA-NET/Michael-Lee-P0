@@ -28,8 +28,8 @@ namespace UI
             string userInput = Console.ReadLine(); //Creating the ReadLine and user Input
             switch (userInput)
             {
-                // case "1":
-                //     return ViewOrders();//Creating a new return method: ViewOrders.
+                 case "1":
+                     return MenuType.ViewOrderHistory;//Creating a new return method: ViewOrders.
 
                 case "2":
                     return MenuType.StoreFrontMenu; //Return to the StoreFrontMenu. 

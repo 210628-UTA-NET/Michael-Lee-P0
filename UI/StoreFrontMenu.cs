@@ -34,7 +34,7 @@ namespace UI
                 case "2":
                     return MenuType.StoreInventoryMenu;
                 case "3":
-                  //  return MenuType.StoreFrontOrderHistory
+                    return MenuType.ViewOrderHistory;
                 case "4":
                     return MenuType.OrderMenu;
                 default:
