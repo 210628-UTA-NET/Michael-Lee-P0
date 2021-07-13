@@ -4,7 +4,7 @@ using DL; //Involves using DL
 using Models; //Involves using Models
 namespace BL
 {
-    public class CustomerBL
+    public class CustomerBL : ICustomerBL
   
     {
         /// <summary>
@@ -22,6 +22,25 @@ namespace BL
         public List<Customer> GetCustomers() //Get the customer list. 
         {
             return _repo.GetCustomers(); //Return the customer. 
+        }
+        public void AddCustomer(Customer _customer)
+        {
+             _repo.AddCustomer(_customer);
+        }
+        public List<Customer> GetCustomers(string findMe) //Function
+        {
+            // return _repo.GetCustomers(findMe);
+            throw new NotImplementedException();
+        }
+
+        Customer ICustomerBL.AddCustomer(Customer p_customer)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Customer GetCustomers(Customer p_customer)
+        {
+            throw new NotImplementedException();
         }
     }
 }
