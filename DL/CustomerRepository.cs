@@ -2,9 +2,11 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text.Json;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata;
+using System.Linq;
 using Model = Models;
 using Entity = DL.Entities;
-using System.Linq;
 
 namespace DL
 {
@@ -28,6 +30,12 @@ namespace DL
             _context.SaveChanges();
             return true;
         }
+
+        public void AddCustomer(Model.Customer customer)
+        {
+            throw new NotImplementedException();
+        }
+
         public List<Models.Customer> GetAllCustomers()
         {
             return _context.Customers.Select(
@@ -59,6 +67,11 @@ namespace DL
         }
 
         public List<Model.Customer> GetCustomers()
+        {
+            throw new NotImplementedException();
+        }
+
+        Model.Customer ICustomerRepository.AddCustomer(Model.Customer customer)
         {
             throw new NotImplementedException();
         }

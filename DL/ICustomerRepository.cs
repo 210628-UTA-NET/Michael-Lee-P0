@@ -16,7 +16,7 @@ namespace DL //The namespace for DL
     /// </summary>
     /// <returns></returns>
         List<Customer> GetCustomers();
-
+        Customer AddCustomer(Customer customer);
     }
         
         
