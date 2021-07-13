@@ -7,7 +7,7 @@ namespace UI //Namspace is currently UI
 {
     class Program
     { 
-        static void Main(string[] args) //Main 
+        public static void Main(string[] args) //Main 
         {
             IMenu restMenu = new MainMenu(); //
             bool repeat = true; //set a condition for the while statement.
