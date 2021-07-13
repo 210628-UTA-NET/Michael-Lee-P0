@@ -26,7 +26,7 @@ namespace UI
                 case "1":
                     return MenuType.AddCustomerMenu;
                 case "2":
-                    return MenuType.MainMenu;
+                    return MenuType.MainMenu; //Put SearchforCustomer.menu when you get the chance. 
                 case "4": 
                     return MenuType.Exit;
                 default:

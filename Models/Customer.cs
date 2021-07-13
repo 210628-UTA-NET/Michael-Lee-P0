@@ -11,41 +11,13 @@ namespace Models
         private string email; //Private string for email
 
         public Customer(){}
-        public int Customer_Id { get; set;}
-        public int Id { get; set; }
-        public string FirstName
-        { 
-            get
-            {
-                return _firstName;
-            }
-            set
-            {
-                if (!Regex.IsMatch(value, @"^[A-Za-z .]+$"))
-                {
-                    throw new Exception("FirstName only holds letters.");
-                }
-                _firstName = value;
-            }
-        }
-        public string LastName
-        {
-            get
-            {
-                return _lastName;
-            }
-            set
-            {
-                if (!Regex.IsMatch(value, @"^[A-Za-z .]+$"))
-                {
-                    throw new Exception("LastName only holds letters.");
-                }
-                _lastName = value;
-            }
-        }
+        public int Customer_Id {get; set;}
+        public int Id {get; set;}
+        public string FirstName {get; set;}
+        public string LastName {get; set;}
 
-        public string Address { get; set;}
-        public string Email { get; set;}
+        public string Address {get; set;}
+        public string Email {get; set;}
         public List<Orders> ListofOrders {get; set;}
 
         public Customer(int p_Customer_Id, string p_firstName, string p_lastName, string p_Address, string p_Email, List<Orders> p_ListOfOrder)
