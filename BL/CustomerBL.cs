@@ -13,9 +13,11 @@ namespace BL
         /// (change from file system into database stored in the cloud)
         /// </summary>
         private ICustomerRepository _repo;
-        private ICustomerRepository p_repo;
+        private object return_repo;
 
-        public CustomerBL(ICustomerRepository _repo) //This is default constructor. No parameters
+        //private ICustomerRepository p_repo;
+
+        public CustomerBL(ICustomerRepository p_repo) //This is default constructor. No parameters
         {
             _repo = p_repo;
         }
@@ -23,9 +25,9 @@ namespace BL
         {
             return _repo.GetCustomers(); //Return the customer. 
         }
-        public void AddCustomer(Customer _customer)
+        public Customer AddCustomer(Customer p_customer)
         {
-             _repo.AddCustomer(_customer);
+            return _repo.AddCustomer(p_customer); //Modified the AddCustomer from my BL. 
         }
         public List<Customer> GetCustomers(string findMe) //Function
         {
