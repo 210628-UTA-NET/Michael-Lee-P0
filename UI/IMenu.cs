@@ -1,7 +1,7 @@
 
 namespace UI //The Namespace of the UI. 
 {
-    public enum MenuType 
+    public enum MenuType //Instead of strings, I used an enum to make connections for related named constants. 
     {
         MainMenu,
         CustomerMenu,

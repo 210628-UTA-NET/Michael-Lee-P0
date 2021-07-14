@@ -1,6 +1,6 @@
 using System;
 
-namespace UI
+namespace UI 
 {
     public class MainMenu : IMenu
     {
@@ -10,8 +10,9 @@ namespace UI
             Console.WriteLine("How may I help you?");
             Console.WriteLine("[0] Add new Customer");
             Console.WriteLine("[1] Go to the Order Menu.");
-            Console.WriteLine("[2] Go to the StorMenu.");
-            Console.WriteLine("[3] Display the Customers");
+            Console.WriteLine("[2] Go to the Store Menu.");
+            Console.WriteLine("[3] Go to the Store Inventory Menu.");
+            Console.WriteLine("[4] Access the Customer Menu.");
 
             Console.WriteLine("[9] Exit");
         }
@@ -30,7 +31,9 @@ namespace UI
                 case "2":
                     return MenuType.StoreMenu;
                 case "3":
-                    return MenuType.OrderMenu;
+                    return MenuType.StoreInventoryMenu; 
+                case "4":
+                    return MenuType.ShowCustomerMenu;
                 case "9":
                     return MenuType.Exit;
                 default:
