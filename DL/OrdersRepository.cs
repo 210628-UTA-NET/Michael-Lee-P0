@@ -40,19 +40,17 @@ namespace DL
                     }
             ).ToList();
         }
-
         public Models.Orders GetOrder(int p_order_Id)
         {
-            var output =  _context.Orders.Find(p_order_Id);
+            throw new NotImplementedException();
+            // var output =  _context.Orders.Find(p_order_Id);
 
-            return              
-                new Models.Orders()
-                {
-                    // OrderLineItems = output.OrderLineItems,
-                    // Total_Price = (int)output.TotalPrice,
-
-                    
-                }
+            // return              
+            //     new Models.Orders()
+            //     {
+            //         OrderLineItems = output.OrderLineItems,
+            //         Total_Price = (int)output.TotalPrice,    
+            //     };
         }
 
         public List<Orders> GetOrders()
@@ -61,9 +59,8 @@ namespace DL
         }
     }
 
-        public List<Models.Orders> GetOrders()
-        {
-            throw new NotImplementedException();
-        }
-    }
-}   
+        // public List<Models.Orders> GetOrders()
+        // {
+        //     throw new NotImplementedException();
+        // }
+}  

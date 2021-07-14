@@ -15,7 +15,7 @@ namespace UI
         } 
         public void Menu()
         {
-            Console.WriteLine();
+            Console.WriteLine("Here is where you can add a Customer!");
             Console.WriteLine(@"  ______                  ");
             Console.WriteLine(@" |      |       |        |");
             Console.WriteLine(@" |      |       |        |");
@@ -24,9 +24,9 @@ namespace UI
             Console.WriteLine(@" |      |  _____|  ______|");
             Console.WriteLine(@" |      | |     |  |     |");
             Console.WriteLine(@" |      | |     |  |     |");
-            Console.WriteLine(@" |      | |_____|  |_____|");
+            Console.WriteLine(@" |      $ |_____$  |_____$");
             Console.WriteLine();
-            Console.WriteLine("[1] FirstName: "+_newCust.FirstName);
+            Console.WriteLine($"[1] FirstName: "+_newCust.FirstName);
             Console.WriteLine("[2] LastName: "+_newCust.LastName);
             Console.WriteLine("[3] Address: "+_newCust.Address);
             Console.WriteLine("[4] Email: "+_newCust.Email);

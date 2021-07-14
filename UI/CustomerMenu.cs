@@ -20,13 +20,13 @@ namespace UI
 
         MenuType IMenu.YourChoice()
         {
-            string YourChoice = Console.ReadLine();
-            switch (YourChoice)
+            string yourChoice = Console.ReadLine();
+            switch (yourChoice)
             {
                 case "1":
                     return MenuType.AddCustomerMenu;
                 case "2":
-                    return MenuType.MainMenu; //Put SearchforCustomer.menu when you get the chance. 
+                    return MenuType.SearchCustomer; //Put SearchforCustomer.menu when you get the chance. 
                 case "4": 
                     return MenuType.Exit;
                 default:
