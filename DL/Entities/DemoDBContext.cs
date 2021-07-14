@@ -30,7 +30,8 @@ namespace DL.Entities
         {
             if (!optionsBuilder.IsConfigured)
             {
-
+//#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
+                optionsBuilder.UseSqlServer("Server=tcp:210628-michael-lee.database.windows.net,1433;Initial Catalog=DemoDB;Persist Security Info=False;User ID=michael-lee201628;Password=Wolfmaster1234;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
             }
         }
 
@@ -88,12 +89,12 @@ namespace DL.Entities
                 entity.HasOne(d => d.LineItemOrders)
                     .WithMany()
                     .HasForeignKey(d => d.LineItemOrdersId)
-                    .HasConstraintName("FK__LineItem___LineI__17F790F9");
+                    .HasConstraintName("FK__LineItem___LineI__208CD6FA");
 
                 entity.HasOne(d => d.Order)
                     .WithMany()
                     .HasForeignKey(d => d.OrderId)
-                    .HasConstraintName("FK__LineItem___Order__18EBB532");
+                    .HasConstraintName("FK__LineItem___Order__2180FB33");
             });
 
             modelBuilder.Entity<LineItemProduct>(entity =>
@@ -109,12 +110,12 @@ namespace DL.Entities
                 entity.HasOne(d => d.LineItemProductNavigation)
                     .WithMany()
                     .HasForeignKey(d => d.LineItemProductId)
-                    .HasConstraintName("FK__LineItem___LineI__151B244E");
+                    .HasConstraintName("FK__LineItem___LineI__1DB06A4F");
 
                 entity.HasOne(d => d.Product)
                     .WithMany()
                     .HasForeignKey(d => d.ProductId)
-                    .HasConstraintName("FK__LineItem___Produ__160F4887");
+                    .HasConstraintName("FK__LineItem___Produ__1EA48E88");
             });
 
             modelBuilder.Entity<Order>(entity =>
@@ -202,12 +203,12 @@ namespace DL.Entities
                 entity.HasOne(d => d.LineItem)
                     .WithMany()
                     .HasForeignKey(d => d.LineItemId)
-                    .HasConstraintName("FK__StoreFron__LineI__1332DBDC");
+                    .HasConstraintName("FK__StoreFron__LineI__1BC821DD");
 
                 entity.HasOne(d => d.LineItemStore)
                     .WithMany()
                     .HasForeignKey(d => d.LineItemStoreId)
-                    .HasConstraintName("FK__StoreFron__LineI__123EB7A3");
+                    .HasConstraintName("FK__StoreFron__LineI__1AD3FDA4");
             });
 
             OnModelCreatingPartial(modelBuilder);
