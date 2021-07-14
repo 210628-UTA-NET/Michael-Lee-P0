@@ -7,7 +7,7 @@ namespace UI
 {
     public class ShowCustomerMenu : IMenu
     {
-        private ICustomerBL _customerBL;
+        private ICustomerBL _customerBL; //Created a Parameter for ICustomerBL. 
         public ShowCustomerMenu(ICustomerBL p_customerBL)
         {
             _customerBL = p_customerBL;
@@ -39,7 +39,7 @@ namespace UI
                     //returns user to CustomerMenu based off of UserInput
                     return MenuType.CustomerMenu;
                 default:
-                    Console.WriteLine("Improper Input");
+                    Console.WriteLine("I am sorry, but this is the wrong input.");
                     Console.WriteLine("Press ENTER to continue");
                     Console.ReadLine();
                     //Default notifies of Improper input then returns user to CustomerMenu
