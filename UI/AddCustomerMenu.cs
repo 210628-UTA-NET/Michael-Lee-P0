@@ -40,9 +40,11 @@ namespace UI
             switch (yourChoice)
             {
                 case "1":
+                    Console.WriteLine("FirstName:");
                     _newCust.FirstName = Console.ReadLine();
                     return MenuType.AddCustomerMenu; 
                 case "2":
+                    Console.WriteLine("LastName:");
                     _newCust.LastName = Console.ReadLine();
                     return MenuType.AddCustomerMenu;
                 case "3":
