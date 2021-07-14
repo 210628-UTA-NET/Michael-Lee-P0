@@ -25,22 +25,22 @@ namespace BL
         {
             return _repo.GetCustomers(); //Return the customer. 
         }
-        public Customer AddCustomer(Customer p_customer)
+        public bool AddCustomer(Customer p_customer)
         {
             return _repo.AddCustomer(p_customer); //Modified the AddCustomer from my BL. 
         }
-        public List<Customer> GetCustomers(string findMe) //Function
-        {
-            // return _repo.GetCustomers(findMe);
-            throw new NotImplementedException();
-        }
-
-        Customer ICustomerBL.AddCustomer(Customer p_customer)
-        {
-            throw new NotImplementedException();
-        }
+        // public Customer SearchCustomer(string enterCust) //Function
+        // {
+        //     // return _repo.SearchCustomer(enterCust);
+        //     return _repo.SearchCustomer(enterCust);
+        // }
 
         public Customer GetCustomers(Customer p_customer)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Customer SearchCustomer(string enterCust)
         {
             throw new NotImplementedException();
         }

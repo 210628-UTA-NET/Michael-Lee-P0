@@ -18,24 +18,20 @@ namespace DL
         {
             _context = p_context;
         }
-        public bool AddCustomer(Entity.Customer p_customer)
+        public bool AddCustomer(Models.Customer p_customer) //Made a connection with AddCustomerMenu. 
         {
-            _context.Customers.Add(new Entity.Customer{
-                Customer_Id = p_customer.Customer_Id,
+            _context.Customers.Add(new Entity.Customer(){
+                CustomerId = p_customer.Id,
                 FirstName = p_customer.FirstName,
                 LastName = p_customer.LastName,
                 Address = p_customer.Address,
-                Email = p_customer.Email, 
+                Email = p_customer.Email 
             });
             _context.SaveChanges();
             return true;
         }
 
-        public void AddCustomer(Model.Customer customer)
-        {
-            throw new NotImplementedException();
-        }
-
+        //public Models.Customer SearchCustomer()
         public List<Models.Customer> GetAllCustomers()
         {
             return _context.Customers.Select(
@@ -70,12 +66,5 @@ namespace DL
         {
             throw new NotImplementedException();
         }
-
-        Model.Customer ICustomerRepository.AddCustomer(Model.Customer customer)
-        {
-            throw new NotImplementedException();
-        }
     }
 }   
-    
-        
