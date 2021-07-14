@@ -14,33 +14,39 @@ namespace UI
     {
         public IMenu GetMenu(MenuType p_menu)
         {
-            /* //Get Configuration learned on 7/7/21
+            //Get Configuration from the appsetting.json earned on 7/7/21
             var configuration = new ConfigurationBuilder()
-                .SetBasePath(Directory.GetCurrentDirectory());
-                .AddJsonFile("appsetting.json");
-                .Build();
+                 .SetBasePath(Directory.GetCurrentDirectory())
+                 .AddJsonFile("appsetting.json")
+                 .Build();
 
             //Grabs our connectionString
 
-            string connectionString = configuration.GetConnectionString("Reference2DB");
+             string connectionString = configuration.GetConnectionString("Reference2DB");
 
-            DBContextOptions<DemoDbContext> options = new DbContextOpetionsBuilder<DemoDbContext>()
-                .UseSQLServer(connectionString)
-                .Options; */
+             DbContextOptions<DemoDBContext> options = new DbContextOptionsBuilder<DemoDBContext>()
+                 .UseSqlServer(connectionString)
+                 .Options; 
             
             switch (p_menu)
             {
-                case MenuType.MainMenu:// Bring the user to the Main Menu to instantiate the object. 
+                case MenuType.MainMenu:// Bring the user to the Main Menu to instantiate the objects. 
                     return new MainMenu();
                 case MenuType.CustomerMenu:
                     return new CustomerMenu();
                 case MenuType.OrderMenu:
                     return new OrderMenu();
                 case MenuType.ShowCustomerMenu:
-                    return null;
-                case MenuType.StoreFrontMenu:
-                    return new StoreFrontMenu();
-                //ShowRestaurantMenu needs a BL object in the parameter because it depends on that object to be able to run its functionality
+                     return new ShowCustomerMenu(new CustomerBL(new CustomerRepository(new DemoDBContext(options))));
+                // case MenuType.StoreFrontMenu:
+                //     return new StoreFrontMenu();
+                case MenuType.AddCustomerMenu:
+                     return new AddCustomerMenu(new CustomerBL(new CustomerRepository(new DemoDBContext(options))));
+                // case MenuType.SearchCustomer:
+                //     return new SearchCustomer(new CustomerBL(new CustomerRepository(new DemoDBContext(options))));
+                // case MenuType.StoreInventoryMenu();
+                //     return new StoreInventoryMenu(new CustomerBL(new CustomerRepository(new DemoDBContext(options))));
+                //ShowCustomerMenu needs a BL object in the parameter because it depends on that object to be able to run its functionality
                 //BL needs the Repository object in the parameter because it depends on that object to be able to run
                 //This is call Dependency Injection
 

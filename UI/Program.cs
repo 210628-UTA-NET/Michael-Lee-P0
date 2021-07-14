@@ -9,7 +9,7 @@ namespace UI //Namspace is currently UI
     { 
         public static void Main(string[] args) //Main 
         {
-            IMenu restMenu = new MainMenu(); //
+            IMenu restMenu = new MainMenu(); // Instantiated restMenu = new MainMenu. 
             bool repeat = true; //set a condition for the while statement.
             MenuType currentMenu = MenuType.MainMenu; //CurrentMenu will equal the CurrentMenu.MainMenu. 
             IFactory menuFactory = new MenuFactory(); //Have a class instance of the MenuFactory and a reference towards the interface type. 
@@ -18,7 +18,6 @@ namespace UI //Namspace is currently UI
             while (repeat)
             {
                 Console.Clear();
-                //The Call Menu will Display
                 restMenu.Menu();
                 //Use the CurrentMenu to impy the user's choice
                 currentMenu = restMenu.YourChoice();
@@ -63,7 +62,7 @@ namespace UI //Namspace is currently UI
                         repeat = false;
                         break;
                     default:
-                        Console.WriteLine("The Information cannot be processed.  Please try again.");
+                        Console.WriteLine("The Information cannot be processed. Please try again.");
                         break;
                 }
             }
