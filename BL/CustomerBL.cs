@@ -29,11 +29,6 @@ namespace BL
         {
             return _repo.AddCustomer(p_customer); //Modified the AddCustomer from my BL. 
         }
-        // public Customer SearchCustomer(string enterCust) //Function
-        // {
-        //     // return _repo.SearchCustomer(enterCust);
-        //     return _repo.SearchCustomer(enterCust);
-        // }
 
         public Customer GetCustomers(Customer p_customer)
         {

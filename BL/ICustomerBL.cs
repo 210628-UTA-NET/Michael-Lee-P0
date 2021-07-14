@@ -5,7 +5,7 @@ using Models;
 namespace BL
 {
     ///<summary>
-    ///Handles all the business logic for store model
+    ///Handles all the business logic for ICustomer
     ///In charger of processing, cleaning, and validation of data
     ///</summary>
     public interface ICustomerBL 

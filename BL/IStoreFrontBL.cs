@@ -7,7 +7,7 @@ namespace BL
     public interface IStoreFrontBL
     {
         /// <summary>
-        /// Gets all the restaurant from the database
+        /// Gets all the StoreFront from the database
         /// </summary>
         /// <returns>Returns a list of restaurants</returns>
         //List<Storefront> GetAllStoreFront();
